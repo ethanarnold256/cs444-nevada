@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Cowboys';
+    src: url("../font/cowboys.otf");
+}
+
+:root {
+    --map-size: 12cm;
+    --normal-color: rgb(221, 134, 63);
+    --hover-color: rgb(179, 78, 19);
+    --been-color: rgb(240, 164, 94);
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    background-color: rgb(245, 196, 132);
+    color: rgb(44, 2, 16);
+}
+
+span {
+    color:rgb(143, 14, 42)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cowboys";
+}
+
+div.macro-grid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: var(--map-size) auto;
+    gap: 1cm;
+    padding: 1cm;
+}
+
+div.map {
+    grid-column: 1;
+}
+
+div.display {
+    grid-column: 2;
+}
+
+path {
+    fill: var(--normal-color);
+}
+
+path:hover {
+    fill: var(--hover-color);
+}
+
+svg#nevada {
+    height: var(--map-size);
+    width: var(--map-size);
+}
+
+.been-to {
+    fill: var(--been-color);
+}
